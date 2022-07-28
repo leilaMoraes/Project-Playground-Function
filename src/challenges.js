@@ -21,27 +21,40 @@ function splitSentence(string) {
 let string;
 
 function concatName(array) {
-  string = [array[array.length - 1], array[0]].join(', ');
+  string = [array.at (- 1), array[0]].join(', ');
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins > 0 || ties > 0){
+  if (wins > 0 || ties > 0) {
     return wins * 3 + ties * 1;
-  } else {
-    return 0;
   }
+  return 0;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+
+  let maxNumber = array[0];
+  let count = 0;
+
+  for (index = 0; index < array.length; index += 1){
+    if (array[index] >= maxNumber){
+      maxNumber = array[index];
+    }
+  }
+  for (index2 = 0; index2 < array.length; index2 += 1){
+    if (array[index2] === maxNumber){
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
 }
 
 // Desafio 8
