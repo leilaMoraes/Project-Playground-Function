@@ -18,9 +18,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-let string; 
 function concatName(array) {
-  string = [array.at(-1), array[0]].join(', ');
+  string = [array[array.length - 1], array[0]].join(', ');
   return string;
 }
 
@@ -57,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (let i = 0; i < array.length; i += 1) { 
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[i] % 5 === 0) {
@@ -72,19 +71,19 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let encodeString = string.replace(/a/gi, '1').replace(/e/gi, '2').replace(/i/gi, '3').replace(/o/gi, '4').replace(/u/gi, '5');
+function encode(newString) {
+  let encodeString = newString.replace(/a/gi, '1').replace(/e/gi, '2').replace(/i/gi, '3').replace(/o/gi, '4').replace(/u/gi, '5');
   return encodeString;
 }
-function decode(string) {
-  let numbers = [1, 2, 3, 4, 5]
-  let decodeString = string.replaceAll(numbers[0], 'a').replaceAll(numbers[1], 'e').replaceAll(numbers[2], 'i').replaceAll(numbers[3], 'o').replaceAll(numbers[4], 'u');
+function decode(stringNumber) {
+  let numbers = [1, 2, 3, 4, 5];
+  let decodeString = stringNumber.replaceAll(numbers[0], 'a').replaceAll(numbers[1], 'e').replaceAll(numbers[2], 'i').replaceAll(numbers[3], 'o').replaceAll(numbers[4], 'u');
   return decodeString;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
 }
 
 module.exports = {
