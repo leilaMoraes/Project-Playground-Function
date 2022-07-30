@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  string = [array.at (- 1), array[0]].join(', ');
+  let string = [array.at(-1), array[0]].join(', ');
   return string;
 }
 
@@ -48,18 +48,30 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (cat1 > cat2) {
-    return "cat2";
+    return 'cat2';
   }
-    return "cat1";
-  }
-//console.log(catAndMouse(1, 0, 2));
+  return 'cat1';
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+  for (i = 0; i < array.length; i += 1) { 
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (array[i] % 5 === 0) {
+      newArray.push('buzz');
+    } else if (array[i] % 3 === 0) {
+      newArray.push('fizz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
