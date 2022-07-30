@@ -18,8 +18,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
+let string; 
 function concatName(array) {
-  let string = [array.at(-1), array[0]].join(', ');
+  string = [array.at(-1), array[0]].join(', ');
   return string;
 }
 
@@ -33,11 +34,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-
   let maxNumber = Math.max(...array);
   let count = 0;
-
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maxNumber) {
       count += 1;
     }
@@ -49,7 +48,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 > cat2) {
+  } if (cat1 > cat2) {
     return 'cat2';
   }
   return 'cat1';
@@ -58,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (i = 0; i < array.length; i += 1) { 
+  for (let i = 0; i < array.length; i += 1) { 
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[i] % 5 === 0) {
@@ -71,14 +70,16 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = string.replace(/a/gi, '1').replace(/e/gi, '2').replace(/i/gi, '3').replace(/o/gi, '4').replace(/u/gi, '5');
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let numbers = [1, 2, 3, 4, 5]
+  let decodeString = string.replaceAll(numbers[0], 'a').replaceAll(numbers[1], 'e').replaceAll(numbers[2], 'i').replaceAll(numbers[3], 'o').replaceAll(numbers[4], 'u');
+  return decodeString;
 }
 
 // Desafio 10
