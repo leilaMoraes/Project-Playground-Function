@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  string = [array[array.length - 1], array[0]].join(', ');
+  let string = [array[array.length - 1], array[0]].join(', ');
   return string;
 }
 
@@ -82,8 +82,16 @@ function decode(stringNumber) {
 }
 
 // Desafio 10
+let arrayObjects = [];
 function techList(tech, name) {
-  
+  tech.sort();
+  for (i = 0; i < tech.length; i += 1){
+  arrayObjects.push({tech: tech[i], name});
+  }
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayObjects;
 }
 
 module.exports = {
