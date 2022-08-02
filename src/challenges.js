@@ -85,8 +85,8 @@ function decode(stringNumber) {
 let arrayObjects = [];
 function techList(tech, name) {
   tech.sort();
-  for (i = 0; i < tech.length; i += 1){
-  arrayObjects.push({tech: tech[i], name});
+  for (let i = 0; i < tech.length; i += 1) {
+    arrayObjects.push({ tech: tech[i], name} );
   }
   if (tech.length === 0) {
     return 'Vazio!';
